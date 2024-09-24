@@ -1,0 +1,290 @@
+/* تصميم شريط التنقل الرئيسي */
+.nav-main {
+    display: flex;
+    background-color: black;
+    color: #fff;
+    height: 40px;
+}
+
+.nav-social {
+    display: flex;
+}
+
+.nav-social li {
+    font-size: 18px;
+    padding: 7px 5px;
+    margin-right: 10px;
+}
+
+.nav-main .contact {
+    margin-left: -56px;
+    margin-top: 7px;
+}
+
+.nav-main .contact a {
+    font-size: 15px;
+    color: #fff;
+    margin-left: 69px;
+    font-weight: 100;
+}
+
+.contact svg {
+    color: #28a745;
+}
+
+/* تصميم شريط التنقل العلوي */
+.navbar {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    height: 73px;
+}
+
+.fixed-menu {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    left: 0px;
+    top: 0px;
+    min-height: auto;
+    width: 100%;
+    padding: 0px 0px;
+    background: #ffffff;
+    z-index: 0;
+    -webkit-box-shadow: 0px 13px 15px -12px rgba(35, 35, 35, 0.15);
+    box-shadow: 0px 13px 15px -12px rgba(35, 35, 35, 0.15);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    -ms-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -op-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -ms-animation-duration: 500ms;
+    -moz-animation-duration: 500ms;
+    -op-animation-duration: 500ms;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -ms-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -op-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -ms-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -op-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.navbar-brand {
+    width: 270px;
+    margin-right: 0;
+}
+
+.nav-md, .nav-mobile {
+    display: none;
+}
+
+/* تصميم الروابط */
+.navbar-nav{
+    margin-left: auto;
+}
+.nav-link {
+    font-weight: 600;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 23px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before,
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 40px;
+    transition: all 500ms ease;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background: #0f183c;
+    height: 5px;
+    border-radius: 6px;
+    transition: all 500ms ease;
+}
+
+.nav-link::before {
+    top: 0px;
+    left: 0px;
+}
+
+.nav-link::after {
+    bottom: 0px;
+    right: 0px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.link-nav .nav-link:hover {
+    color: #000;
+}
+
+.nav-social .nav-link.active,
+.nav-social .nav-link.show,
+.nav-social .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-brand img {
+    width: 100%;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+    border: #fff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.ar{
+    display: none;
+}
+/* تصميم للعرض الصغير */
+@media (max-width: 991px) {
+    .nav-lg {
+        display: none !important;
+    }
+
+    .navbar-brand {
+        margin: auto;
+        margin-top: -26px;
+    }
+
+    .nav-md {
+        display: block;
+    }
+
+    .nav-md .logo-barnd {
+        width: 270px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .nav-md .logo-barnd img {
+        width: 100%;
+    }
+
+    .nav-md-link {
+        margin: auto;
+        width: fit-content;
+        margin-top: -25px;
+        margin-bottom: 18px;
+    }
+
+    .nav-main,
+    .nav-social {
+        display: none;
+    }
+
+    .navbar-collapse {
+        background-color: #fff;
+    }
+
+    .nav-link {
+        display: flex;
+        padding: 10px 15px;
+        color: #323232;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .link-nav {
+        margin-top: 40px;
+    }
+    .navbar-collapse {
+        width: 100vw;
+        position: absolute;
+        top: 73px;
+        left: -12px;
+    }
+}
+
+@media (max-width: 770px) {
+    .nav-link {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-md {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+    .navbar-brand{
+        margin-top: 0;
+        margin-left: -17px;
+        width: 200px;
+    }
+    
+.nav-link:hover::before,
+.nav-link.active::before,
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 0px;
+}
+}
+
+@media (max-width: 400px) {
+    .nav-mobile .logo-barnd {
+        width: 219px;
+    }
+}
+@media (max-width:350px){
+    .navbar-brand {
+        margin-top: 5px;
+        margin-left: -17px;
+        width: 170px;
+    }
+}
+/* RTL */
+[dir="rtl"] .en {
+    display: none;
+}
+
+[dir="rtl"] .ar {
+    display: block;
+}
+
+[dir="rtl"] .nav-mobile .logo-barnd {
+    margin-right: auto;
+}
+
+[dir="rtl"] .nav-link {
+    font-size: 16px;
+}
+[dir="rtl"]   .navbar-brand{
+    margin-right: 0 !important;
+}
+[dir="rtl"] .navbar-nav{
+    margin-right: 30px !important;
+}
+/* للعرض الكامل على الشاشات الصغيرة */
